@@ -32,6 +32,11 @@
 $ yarn install
 ```
 
+## Migration
+```bash
+$ yarn migration:up
+```
+
 ## Running the app
 
 ```bash
