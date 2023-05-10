@@ -21,4 +21,26 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+
+  it('/registration (POST)', () => {
+    return request(app.getHttpServer())
+      .post('/registration')
+      .set('Accept', "multipart/form-data")
+      .field('username', 'kristian ruben')
+      .expect({
+        'message': 'register done',
+      });
+  });
+
+  it('/registration (POST) duplicate error', () => {
+    return request(app.getHttpServer())
+      .post('/registration')
+      .set('Accept', "multipart/form-data")
+      .field('username', 'kristian ruben')
+      .expect({
+        "statusCode": 409,
+        "message": "Username already in use",
+        "error": "Conflict"
+      });
+  });
 });

@@ -32,6 +32,11 @@
 $ yarn install
 ```
 
+## Run Postgre with docker
+```bash
+$ docker compose up
+```
+
 ## Migration
 ```bash
 $ yarn migration:up

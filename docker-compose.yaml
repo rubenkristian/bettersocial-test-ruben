@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    container_name: debio-postgres
+    image: bitnami/postgresql:latest
+    restart: always
+    environment:
+      POSTGRES_DATABASE: bettersocial
+      POSTGRES_USERNAME: root
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - 5432:5432
