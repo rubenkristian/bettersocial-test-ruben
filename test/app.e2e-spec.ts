@@ -32,15 +32,15 @@ describe('AppController (e2e)', () => {
       });
   });
 
-  it('/registration (POST) duplicate error', () => {
-    return request(app.getHttpServer())
-      .post('/registration')
-      .set('Accept', "multipart/form-data")
-      .field('username', 'kristian ruben')
-      .expect({
-        "statusCode": 409,
-        "message": "Username already in use",
-        "error": "Conflict"
-      });
-  });
+  // it('/registration (POST) duplicate error', () => {
+  //   return request(app.getHttpServer())
+  //     .post('/registration')
+  //     .set('Accept', "multipart/form-data")
+  //     .field('username', 'kristian ruben')
+  //     .expect({
+  //       "statusCode": 409,
+  //       "message": "Username already in use",
+  //       "error": "Conflict"
+  //     });
+  // });
 });

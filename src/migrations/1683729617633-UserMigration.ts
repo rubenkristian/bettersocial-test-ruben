@@ -7,7 +7,9 @@ export class UserMigration1683729617633 implements MigrationInterface {
         CREATE TABLE "users" (
           "id" SERIAL PRIMARY KEY,
           "username" VARCHAR(255) UNIQUE NOT NULL,
-          "picture" VARCHAR(255)
+          "picture" VARCHAR(255) default NULL,
+          "created_at" TIMESTAMP default NULL,
+          "updated_at" TIMESTAMP default NULL
         )
       `);
     }

@@ -32,7 +32,7 @@ export class RegistrationController {
   })
   @UseInterceptors(FileInterceptor('picture', {
     storage: diskStorage({
-      destination: './public/upload',
+      destination: './public/temp',
     })
   }))
   public async registerUser(@Body() registrationDto: RegistrationDTO, @UploadedFile() file: Express.Multer.File) {

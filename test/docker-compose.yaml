@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    container_name: bettersocial
+    container_name: bettersocial-test-e2e
     image: bitnami/postgresql:latest
     restart: always
     environment:
